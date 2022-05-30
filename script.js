@@ -59,15 +59,16 @@ function card_two() {
    
 
    let btn = card[1].getElementsByClassName("btn btn-sm btn-outline-secondary");
+   
+   btn[0].style.color === 'grey'
 
     btn[0].addEventListener("click", function() {
 
-        btn[0].style.color === 'grey'
         
         if (btn[0].style.color === 'grey'){
             btn[0].style.color = 'green' ;
 
-        }else {btn[0].style.color == 'green';
+        }else {btn[0].style.color === 'green';
         btn[0].style.color = 'grey';
         }
         });
@@ -87,20 +88,37 @@ let Navbar = document.querySelector("div.navbar")
    let link = document.getElementsByTagName('link')
 
  
-   Navbar.addEventListener('dblclick', function (){
+   Navbar.addEventListener('dblclick', function (){ 
 
         link[0].href=""
         link[0].integrity=""
 
-      
+        
     });
-
-
-
 }
 
 Delete ();
 
+//fonctionnalité 6
 
+function view() {
 
+    let view = document.querySelector("div.card");
+   let btn = view.getElementsByClassName("btn btn-sm btn-success");
+   let img = document.querySelector("img.card-img-top");
+
+  let card = document.getElementsByClassName("card-text");
+
+    btn[0].addEventListener("mousemove", function() {
+
+      
+
+    document.getElementsByClassName("card-text")[0].innerHTML="";
+    img.style.width = "20%";
+
+});
+
+}
+
+view ();
 
